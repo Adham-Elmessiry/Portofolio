@@ -56,14 +56,31 @@
             font-weight: bold;
             margin-bottom: 1rem;
         }
+        
+        /* Updated Image Styles for Uniformity */
         .portfolio-img {
             width: 100%;
-            max-width: 300px;
+            height: 200px; /* Forces all images to the same height */
+            object-fit: cover; /* Crops the image smartly so it doesn't stretch */
             border-radius: 8px;
             border: 1px solid #ccc;
             margin-bottom: 1rem;
             display: block;
+            cursor: pointer; /* Changes mouse to a pointer to show it's clickable */
+            transition: transform 0.2s ease-in-out;
         }
+        .portfolio-img:hover {
+            transform: scale(1.02); /* Slight hover effect */
+        }
+        
+        /* Ensure videos don't get cropped weirdly */
+        video.portfolio-img {
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            cursor: default;
+        }
+
         .btn {
             display: inline-block;
             background: #2980b9;
@@ -105,7 +122,28 @@
             margin-bottom: 0;
             flex: 1;
             min-width: 150px;
-            object-fit: cover;
+        }
+
+        /* Lightbox (Fullscreen Image Viewer) Styles */
+        .lightbox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            object-fit: contain;
         }
     </style>
 </head>
@@ -163,7 +201,7 @@
             <h3>Arduino UNO Q Robocar Workshop (Besomi Academy)</h3>
             <p class="tech-tags">Arduino UNO Q | C++ | Robotics</p>
             
-            <video class="portfolio-img" style="max-width: 300px; border-radius: 8px; margin-bottom: 1rem;" controls muted loop playsinline>
+            <video class="portfolio-img" controls muted loop playsinline>
                 <source src="Robocar.mp4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -208,10 +246,9 @@
             <h3>RTA Live AI Dashboard</h3>
             <p class="tech-tags">Web Interface | Real-Time Analytics | Traffic Monitoring</p>
             
-            <!-- Dashboard images stacked individually for better visibility -->
-            <img src="RTA AI Dahboard (1).png" alt="RTA Dashboard 1" class="portfolio-img" style="max-width: 100%;">
-            <img src="RTA AI Dahboard (2).png" alt="RTA Dashboard 2" class="portfolio-img" style="max-width: 100%;">
-            <img src="RTA AI Dahboard (3).png" alt="RTA Dashboard 3" class="portfolio-img" style="max-width: 100%;">
+            <img src="RTA AI Dahboard (1).png" alt="RTA Dashboard 1" class="portfolio-img">
+            <img src="RTA AI Dahboard (2).png" alt="RTA Dashboard 2" class="portfolio-img">
+            <img src="RTA AI Dahboard (3).png" alt="RTA Dashboard 3" class="portfolio-img">
             
             <ul>
                 <li>Developed a dedicated web dashboard to visualize real-time traffic data and monitor system analytics.</li>
@@ -310,7 +347,7 @@
             <h3>Water Efficient Solar Panel Cleaning Mechanism</h3>
             <p class="tech-tags">AutoCAD 3D | Mechanical Stress & Fatigue Analysis</p>
             
-            <video class="portfolio-img" style="max-width: 300px; border-radius: 8px; margin-bottom: 1rem;" controls muted loop playsinline>
+            <video class="portfolio-img" controls muted loop playsinline>
                 <source src="solar-cleaner.mp4.mp4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -361,6 +398,29 @@
         </p>
         <p>Email: adham689@icloud.com</p>
     </footer>
+
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const images = document.querySelectorAll('img.portfolio-img'); // Only selects images, ignores video tags
+
+        // Open lightbox on image click
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+            });
+        });
+
+        // Close lightbox when clicking anywhere on it
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
 
 </body>
 </html>
