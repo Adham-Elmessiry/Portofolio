@@ -60,25 +60,28 @@
         /* Updated Image Styles for Uniformity */
         .portfolio-img {
             width: 100%;
-            height: 200px; /* Forces all images to the same height */
-            object-fit: cover; /* Crops the image smartly so it doesn't stretch */
+            height: 200px;
+            object-fit: cover;
             border-radius: 8px;
             border: 1px solid #ccc;
             margin-bottom: 1rem;
             display: block;
-            cursor: pointer; /* Changes mouse to a pointer to show it's clickable */
+            cursor: pointer;
             transition: transform 0.2s ease-in-out;
         }
         .portfolio-img:hover {
-            transform: scale(1.02); /* Slight hover effect */
+            transform: scale(1.02);
         }
-        
-        /* Ensure videos don't get cropped weirdly */
-        video.portfolio-img {
+
+        /* Specific styling to keep videos their original size */
+        .portfolio-video {
+            width: 100%;
+            max-width: 300px;
             height: auto;
-            max-height: 200px;
-            object-fit: contain;
-            cursor: default;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .btn {
@@ -126,7 +129,7 @@
 
         /* Lightbox (Fullscreen Image Viewer) Styles */
         .lightbox {
-            display: none; /* Hidden by default */
+            display: none; 
             position: fixed;
             z-index: 1000;
             left: 0;
@@ -201,7 +204,7 @@
             <h3>Arduino UNO Q Robocar Workshop (Besomi Academy)</h3>
             <p class="tech-tags">Arduino UNO Q | C++ | Robotics</p>
             
-            <video class="portfolio-img" controls muted loop playsinline>
+            <video class="portfolio-video" controls muted loop playsinline>
                 <source src="Robocar.mp4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -347,7 +350,7 @@
             <h3>Water Efficient Solar Panel Cleaning Mechanism</h3>
             <p class="tech-tags">AutoCAD 3D | Mechanical Stress & Fatigue Analysis</p>
             
-            <video class="portfolio-img" controls muted loop playsinline>
+            <video class="portfolio-video" controls muted loop playsinline>
                 <source src="solar-cleaner.mp4.mp4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -406,9 +409,8 @@
     <script>
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
-        const images = document.querySelectorAll('img.portfolio-img'); // Only selects images, ignores video tags
+        const images = document.querySelectorAll('img.portfolio-img'); 
 
-        // Open lightbox on image click
         images.forEach(img => {
             img.addEventListener('click', () => {
                 lightbox.style.display = 'flex';
@@ -416,7 +418,6 @@
             });
         });
 
-        // Close lightbox when clicking anywhere on it
         lightbox.addEventListener('click', () => {
             lightbox.style.display = 'none';
         });
