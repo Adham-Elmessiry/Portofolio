@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adham El-Messiry | Mechatronics Portfolio</title>
+    <title>Adham Elmessiry | Mechatronics Portfolio</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,7 +44,7 @@
             margin-bottom: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            overflow: hidden; /* Ensures child elements don't break layout */
+            overflow: hidden;
         }
         .project-card h3 {
             margin-top: 0;
@@ -92,14 +92,17 @@
             text-decoration: underline;
             color: #3498db;
         }
+        .skills-section p {
+            margin: 0.5rem 0;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Adham El-Messiry</h1>
+        <h1>Adham Elmessiry</h1>
         <p>Mechatronics Engineering | Robotics & Automation | Dubai, UAE</p>
-        <a href="Adham El-Messiry_CV_PDF.pdf" class="btn" download>Download My CV</a>
+        <a href="Adham_Elmessiry_CV_PDF.pdf" class="btn" download>Download My CV</a>
     </header>
 
     <div class="container">
@@ -107,16 +110,34 @@
         <h2>About Me</h2>
         <p>I am a Mechatronics Engineering student experienced in robotics, embedded systems, automation, and automotive diagnostics. I enjoy integrating software like Python and C++ with physical hardware through sensors, control logic, and system-level troubleshooting.</p>
 
+        <h2>Technical Skills</h2>
+        <div class="project-card skills-section">
+            <p><strong>Programming:</strong> Python, C/C++, MATLAB, Arduino Programming, Structured Text (PLC)</p>
+            <p><strong>AI & Computer Vision:</strong> Machine Learning, Generative AI, YOLO Object Detection, OpenCV, Image Processing, Mistral AI</p>
+            <p><strong>Embedded Systems & Electronics:</strong> Arduino, Raspberry Pi, Arduino UNO Q, Ultrasonic/LDR Sensors, CAN Bus, ECU Diagnostics</p>
+            <p><strong>Control Systems & Automation:</strong> PI Control, Feedback Control, PLC Logic, Pneumatics, Hydraulics, Process Control</p>
+            <p><strong>Engineering & Mechanical:</strong> AutoCAD, MATLAB Simulink, Connected Components Workbench (CCW), BMW ISTA, 3D CAD, Stress/Fatigue Analysis</p>
+        </div>
+
         <h2>Experience & Workshops</h2>
         
         <div class="project-card">
             <h3>AGMC BMW Engineering Intern</h3>
-            <p class="tech-tags">Diagnostic Tools: BMW ISTA, CAN bus </p>
+            <p class="tech-tags">Diagnostic Tools: BMW ISTA, CAN bus</p>
             <ul>
                 <li>Performed advanced diagnostics using BMW ISTA, including ECU fault tracing and CAN bus analysis.</li>
                 <li>Assisted senior technicians with mechanical and electrical system repairs and recalibration.</li>
             </ul>
             <a href="Adham El-Messiry -AGMC Internship letter.pdf" target="_blank" class="cert-link">View Internship Letter</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Founder | Maktoub Clothing Brand</h3>
+            <p class="tech-tags">Entrepreneurship | Brand Strategy | Digital Marketing</p>
+            <ul>
+                <li>Founded and developed an independent clothing brand, managing product design, branding strategy, marketing, and digital presence.</li>
+                <li>Applied entrepreneurship principles including customer analysis, brand identity development, and social media marketing.</li>
+            </ul>
         </div>
 
         <div class="project-card">
@@ -134,14 +155,73 @@
             </ul>
         </div>
 
+        <h2>Competitions</h2>
+        <div class="project-card">
+            <h3>Roads and Transport Authority (RTA) Innovation Competition 2026</h3>
+            <p class="tech-tags">AI | Mistral AI | Intelligent Transportation Systems</p>
+            <ul>
+                <li>Collaborated in a multidisciplinary team to solve a real-world transportation challenge during a one-week innovation competition.</li>
+                <li>Contributed to the Business Plan, Marketing Strategy, Responsible AI framework, and Data Management strategy presented to RTA judges.</li>
+            </ul>
+        </div>
+
         <h2>Core Projects</h2>
 
         <div class="project-card">
+            <h3>RTA AI Intelligent Traffic Management Solution</h3>
+            <p class="tech-tags">Computer Vision | Mistral AI | Central Fusion System</p>
+            
+            <div style="display: flex; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap;">
+                <img src="RTA Presentation1.jpeg" alt="RTA Presentation 1" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 150px; object-fit: cover;">
+                <img src="RTA Presentation2.jpeg" alt="RTA Presentation 2" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 150px; object-fit: cover;">
+                <img src="RTA Presentation3.jpeg" alt="RTA Presentation 3" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 150px; object-fit: cover;">
+            </div>
+            
+            <ul>
+                <li>Designed an AI-powered traffic management proof-of-concept featuring a central fusion system to reduce congestion.</li>
+                <li>Engineered AI camera detection frameworks to identify vehicles on the road (such as ambulances) to dynamically prioritize emergency response routing.</li>
+                <li>Presented a live prototype demonstrating adaptive traffic signal optimization using AI technologies.</li>
+            </ul>
+            <a href="YOUR_GITHUB_RELEASE_LINK_HERE" target="_blank" class="btn">View v1.0.0 Release</a>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Object Detection System</h3>
+            <p class="tech-tags">YOLO Framework | Python | Custom Dataset</p>
+            <ul>
+                <li>Developed and trained a custom YOLO-based object detection model to identify office hardware (desktop PCs, printers, smart boards) using an 800-image labeled dataset over 50 epochs.</li>
+                <li>Engineered a web-based interface to visualize detection results and seamlessly test model accuracy.</li>
+            </ul>
+            <a href="YOUR_GITHUB_RELEASE_LINK_HERE" target="_blank" class="btn">View v1.0.0 Release</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Vunch: Interactive Mobile App Prototype</h3>
+            <p class="tech-tags">UI/UX Design | Software Development | VS Code</p>
+            <img src="Feed.png" alt="Mobile App Video Feed" class="portfolio-img" style="max-width: 300px;">
+            <ul>
+                <li>Designed and built a mobile application featuring a continuous, TikTok-style video feed interface, complete with a hamburger navigation menu.</li>
+                <li>Engineered user-specific data handling, including a functional "saved videos" section featuring a dynamic red heart toggle and a custom empty state interface.</li>
+            </ul>
+            <a href="YOUR_GITHUB_RELEASE_LINK_HERE" target="_blank" class="btn">View v1.0.0 Release</a>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Presentation Assistant (Work in Progress)</h3>
+            <p class="tech-tags">Generative AI | Active Development</p>
+            <ul>
+                <li>Currently developing an AI-powered presentation assistant designed to streamline and enhance presentation workflows.</li>
+                <li>Focusing on integrating machine learning tools to optimize presentation creation and delivery.</li>
+            </ul>
+            <a href="YOUR_GITHUB_RELEASE_LINK_HERE" target="_blank" class="btn">View v0.1.0-alpha Release</a>
+        </div>
+
+        <div class="project-card">
             <h3>AI Autonomous Robocar</h3>
-            <p class="tech-tags">Raspberry Pi | Python | Ultrasonic Sensors | Camera </p>
+            <p class="tech-tags">Raspberry Pi | Python | Ultrasonic Sensors | Camera</p>
             <img src="Robocar.jpg" alt="AI Autonomous Robocar" class="portfolio-img">
             <ul>
-                <li>Built a Raspberry Pi-based autonomous vehicle integrating camera and ultrasonic sensors.</li>
+                <li>Built a Raspberry Pi-based autonomous vehicle integrating camera vision and ultrasonic sensors.</li>
                 <li>Implemented real-time navigation and lane detection using Python.</li>
             </ul>
         </div>
@@ -188,18 +268,9 @@
         </div>
 
         <div class="project-card">
-            <h3>Interactive Mobile App Prototype</h3>
-            <p class="tech-tags">UI/UX Design | Software Development | VS Code</p>
-            <img src="Feed.png" alt="Mobile App Video Feed" class="portfolio-img" style="max-width: 300px;">
-            <ul>
-                <li>Designed and built a mobile application prototype featuring a continuous, TikTok-style video feed interface.</li>
-                <li>Engineered user-specific data handling, including a functioning "saved videos" section.</li>
-            </ul>
-        </div>
-
-        <div class="project-card">
             <h3>Motorcycle Restoration & Electrical Rewiring</h3>
-            <p class="tech-tags">Multimeter | Mechanical Repair | Wiring </p>
+            <p class="tech-tags">Multimeter | Mechanical Repair | Wiring</p>
+            <img src="Motorcycle Restoration.jpeg" alt="Motorcycle Restoration" class="portfolio-img" style="max-width: 300px;">
             <ul>
                 <li>Completed a full mechanical overhaul and electrical harness reconstruction.</li>
                 <li>Diagnosed ignition, charging, and starter systems using systematic fault isolation.</li>
@@ -208,7 +279,7 @@
 
         <div class="project-card">
             <h3>Smart Street Lighting System</h3>
-            <p class="tech-tags">Raspberry Pi | LDR | Motion Sensors </p>
+            <p class="tech-tags">Raspberry Pi | LDR | Motion Sensors</p>
             <ul>
                 <li>Designed an adaptive lighting system using LDR and motion sensors to save energy.</li>
                 <li>Achieved 35% simulated energy reduction using embedded automation logic.</li>
@@ -217,27 +288,32 @@
 
         <div class="project-card">
             <h3>Computer Vision & Automation</h3>
-            <p class="tech-tags">MATLAB | Connected Components Workbench (CCW) </p>
+            <p class="tech-tags">MATLAB | Connected Components Workbench (CCW)</p>
             <ul>
                 <li>Executed blob detection and image processing algorithms in MATLAB.</li>
                 <li>Programmed structured text logic in CCW for temperature conversion and process control.</li>
             </ul>
         </div>
 
-        <h2>Certifications</h2>
+        <h2>Certifications & Professional Development</h2>
         <ul>
+            <li><strong>RTA Innovation Challenge Certificate</strong> - AI, Responsible AI, Data Strategy, and Innovation</li>
             <li><a href="Besomi Arduino UNO Q Certificate.pdf" target="_blank" class="cert-link">Arduino UNO Q Workshop - Besomi Academy</a></li>
             <li><a href="Certificate of Appreciation CUD.jpeg" target="_blank" class="cert-link">Certificate of Appreciation - Canadian University Dubai</a></li>
-            <li><a href="Introduction to IoT Cisco.pdf" target="_blank" class="cert-link">Introduction to Internet of Things - Cisco Networking Academy </a></li>
-            <li><a href="Introduction to Modern AI Cisco.pdf" target="_blank" class="cert-link">Introduction to Modern AI - Cisco Networking Academy </a></li>
-            <li><a href="Nvidia.png" target="_blank" class="cert-link">Generative AI Explained - NVIDIA </a></li>
+            <li><a href="ApplyAIAnalyzeCustomerReviews.pdf" target="_blank" class="cert-link">Apply AI: Analyze Customer Reviews - Cisco Networking Academy</a></li>
+            <li><a href="Introduction to IoT Cisco.pdf" target="_blank" class="cert-link">Introduction to Internet of Things (IoT) - Cisco Networking Academy</a></li>
+            <li><a href="Introduction to Modern AI Cisco.pdf" target="_blank" class="cert-link">Introduction to Modern AI - Cisco Networking Academy</a></li>
+            <li><a href="Nvidia.png" target="_blank" class="cert-link">Generative AI Explained - NVIDIA</a></li>
         </ul>
 
     </div>
 
     <footer>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/adham-elmessiry/" style="color: #3498db;">LinkedIn</a> </p>
-        <p>Email: adham689@icloud.com </p>
+        <p>Connect with me on 
+            <a href="https://www.linkedin.com/in/adham-elmessiry/" style="color: #3498db;">LinkedIn</a> | 
+            <a href="https://github.com/adham-elmessiry" style="color: #3498db;">GitHub</a>
+        </p>
+        <p>Email: adham689@icloud.com</p>
     </footer>
 
 </body>
