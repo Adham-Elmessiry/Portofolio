@@ -95,6 +95,18 @@
         .skills-section p {
             margin: 0.5rem 0;
         }
+        .gallery {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            margin-bottom: 0;
+            flex: 1;
+            min-width: 150px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -134,6 +146,13 @@
         <div class="project-card">
             <h3>Founder | Maktoub Clothing Brand</h3>
             <p class="tech-tags">Entrepreneurship | Brand Strategy | Digital Marketing</p>
+            
+            <div class="gallery">
+                <img src="Maktoub (1).jpeg" alt="Maktoub 1" class="portfolio-img">
+                <img src="Maktoub (2).jpeg" alt="Maktoub 2" class="portfolio-img">
+                <img src="Maktoub (3).jpeg" alt="Maktoub 3" class="portfolio-img">
+            </div>
+
             <ul>
                 <li>Founded and developed an independent clothing brand, managing product design, branding strategy, marketing, and digital presence.</li>
                 <li>Applied entrepreneurship principles including customer analysis, brand identity development, and social media marketing.</li>
@@ -171,10 +190,10 @@
             <h3>RTA AI Intelligent Traffic Management Solution</h3>
             <p class="tech-tags">Computer Vision | Mistral AI | Central Fusion System</p>
             
-            <div style="display: flex; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap;">
-                <img src="RTA Presentation1.jpeg" alt="RTA Presentation 1" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 150px; object-fit: cover;">
-                <img src="RTA Presentation2.jpeg" alt="RTA Presentation 2" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 150px; object-fit: cover;">
-                <img src="RTA Presentation3.jpeg" alt="RTA Presentation 3" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 150px; object-fit: cover;">
+            <div class="gallery">
+                <img src="RTA Presentation1.jpeg" alt="RTA Presentation 1" class="portfolio-img">
+                <img src="RTA Presentation2.jpeg" alt="RTA Presentation 2" class="portfolio-img">
+                <img src="RTA Presentation3.jpeg" alt="RTA Presentation 3" class="portfolio-img">
             </div>
             
             <ul>
@@ -182,17 +201,39 @@
                 <li>Engineered AI camera detection frameworks to identify vehicles on the road (such as ambulances) to dynamically prioritize emergency response routing.</li>
                 <li>Presented a live prototype demonstrating adaptive traffic signal optimization using AI technologies.</li>
             </ul>
-            <a href="https://github.com/Adham-Elmessiry/Vunch/releases" target="_blank" class="btn">View v1.0.0 Release</a>
+            <a href="https://github.com/Adham-Elmessiry/RTATrafficOperations/releases" target="_blank" class="btn">View v1.0.0 Release</a>
+        </div>
+
+        <div class="project-card">
+            <h3>RTA Live AI Dashboard</h3>
+            <p class="tech-tags">Web Interface | Real-Time Analytics | Traffic Monitoring</p>
+            
+            <!-- Dashboard images stacked individually for better visibility -->
+            <img src="RTA AI Dahboard (1).png" alt="RTA Dashboard 1" class="portfolio-img" style="max-width: 100%;">
+            <img src="RTA AI Dahboard (2).png" alt="RTA Dashboard 2" class="portfolio-img" style="max-width: 100%;">
+            <img src="RTA AI Dahboard (3).png" alt="RTA Dashboard 3" class="portfolio-img" style="max-width: 100%;">
+            
+            <ul>
+                <li>Developed a dedicated web dashboard to visualize real-time traffic data and monitor system analytics.</li>
+                <li>Integrated live status tracking to display active intersection states and emergency vehicle routing.</li>
+            </ul>
         </div>
 
         <div class="project-card">
             <h3>AI Object Detection System</h3>
             <p class="tech-tags">YOLO Framework | Python | Custom Dataset</p>
+            
+            <div class="gallery">
+                <img src="Object Detection (1).png" alt="Object Detection 1" class="portfolio-img">
+                <img src="Object Detection (2).png" alt="Object Detection 2" class="portfolio-img">
+                <img src="Object Detection (3).png" alt="Object Detection 3" class="portfolio-img">
+            </div>
+
             <ul>
                 <li>Developed and trained a custom YOLO-based object detection model to identify office hardware (desktop PCs, printers, smart boards) using an 800-image labeled dataset over 50 epochs.</li>
                 <li>Engineered a web-based interface to visualize detection results and seamlessly test model accuracy.</li>
             </ul>
-            <a href="https://github.com/Adham-Elmessiry/AI-Presentation-Assistant-WIP-/releases="_blank" class="btn">View v1.0.0 Release</a>
+            <a href="https://github.com/Adham-Elmessiry/Object-Detection/releases" target="_blank" class="btn">View v1.0.0 Release</a>
         </div>
 
         <div class="project-card">
@@ -209,11 +250,18 @@
         <div class="project-card">
             <h3>AI Presentation Assistant (Work in Progress)</h3>
             <p class="tech-tags">Generative AI | Active Development</p>
+            
+            <div class="gallery">
+                <img src="AI presentation Assistant (1).png" alt="Presentation Assistant 1" class="portfolio-img">
+                <img src="AI presentation Assistant (2).png" alt="Presentation Assistant 2" class="portfolio-img">
+                <img src="AI presentation Assistant (3).png" alt="Presentation Assistant 3" class="portfolio-img">
+            </div>
+
             <ul>
                 <li>Currently developing an AI-powered presentation assistant designed to streamline and enhance presentation workflows.</li>
                 <li>Focusing on integrating machine learning tools to optimize presentation creation and delivery.</li>
             </ul>
-            <a href="https://github.com/Adham-Elmessiry/Object-Detection/releases" target="_blank" class="btn">View v0.1.0-alpha Release</a>
+            <a href="https://github.com/Adham-Elmessiry/AI-Presentation-Assistant-WIP-/releases" target="_blank" class="btn">View v0.1.0-alpha Release</a>
         </div>
 
         <div class="project-card">
@@ -230,9 +278,9 @@
             <h3>Electro-Pneumatic & Hydraulic Control Circuits</h3>
             <p class="tech-tags">Pneumatics | Control Logic | Industrial Automation</p>
             
-            <div style="display: flex; gap: 10px; margin-bottom: 1rem; flex-wrap: wrap;">
-                <img src="Pneumatics1.jpeg" alt="Pneumatic Setup 1" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 200px; object-fit: cover;">
-                <img src="Pneumatic2.jpeg" alt="Pneumatic Setup 2" class="portfolio-img" style="margin-bottom: 0; flex: 1; min-width: 200px; object-fit: cover;">
+            <div class="gallery">
+                <img src="Pneumatics1.jpeg" alt="Pneumatic Setup 1" class="portfolio-img">
+                <img src="Pneumatic2.jpeg" alt="Pneumatic Setup 2" class="portfolio-img">
             </div>
             
             <ul>
@@ -244,6 +292,13 @@
         <div class="project-card">
             <h3>Intelligent Automated Package Sorting Conveyor System</h3>
             <p class="tech-tags">MATLAB / Simulink | OpenCV | PI Control | AutoCAD</p>
+            
+            <div class="gallery">
+                <img src="Conveyor (1).png" alt="Conveyor 1" class="portfolio-img">
+                <img src="Conveyor (2).png" alt="Conveyor 2" class="portfolio-img">
+                <img src="Conveyor (3).png" alt="Conveyor 3" class="portfolio-img">
+            </div>
+
             <ul>
                 <li>Designed a smart conveyor system that autonomously identifies and routes packages into Standard, Fragile, and Express lanes.</li>
                 <li>Implemented a PI controller for closed-loop speed regulation of a DC motor using encoder feedback.</li>
